@@ -1,5 +1,7 @@
 package com.example.memopad.Model;
 
+import androidx.annotation.NonNull;
+
 public class Memo {
     private int id;
     private String memo;
@@ -8,10 +10,14 @@ public class Memo {
         this.id = id;
         this.memo = memo;
     }
+    public Memo(String memo) {
+        this.memo = memo;
+    }
+
     public int getId(){
         return id;
     }
-    public void setID(int id){
+    public void setId(int id){
         this.id = id;
     }
     public String getMemo(){
@@ -20,11 +26,10 @@ public class Memo {
     public void setMemo(String memo){
         this.memo = memo;
     }
+    @NonNull
     @Override
     public String toString(){
-        StringBuilder s = new StringBuilder();
-        s.append(id).append(": ").append(memo);
-        return s.toString();
+        return id + ": " + memo;
 
     }
 
