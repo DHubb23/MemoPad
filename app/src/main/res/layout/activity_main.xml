@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity">
+    tools:context=".Controller.MainActivity">
 
     <TextView
         android:id="@+id/newMemo"
@@ -14,7 +14,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="New Memo:"
-        android:textSize="24dp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.011"
@@ -53,16 +53,24 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="32dp"
         android:gravity="center|top"
+        android:hint="Enter memo"
         android:labelFor="@id/newMemo"
+        android:minHeight="48dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/newMemo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/newMemo" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="409dp"
-        android:layout_height="715dp"
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/addButton"
-        tools:layout_editor_absoluteX="1dp" />
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
