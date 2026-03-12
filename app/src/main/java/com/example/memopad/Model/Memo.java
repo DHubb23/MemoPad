@@ -17,20 +17,15 @@ public class Memo {
     public int getId(){
         return id;
     }
-    public void setId(int id){
-        this.id = id;
-    }
+
     public String getMemo(){
         return memo;
     }
-    public void setMemo(String memo){
-        this.memo = memo;
-    }
+
     @NonNull
     @Override
     public String toString(){
         return id + ": " + memo;
 
     }
-
 }
